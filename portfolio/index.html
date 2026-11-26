@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Zakaria Ebne Mahmud — Ethical Hacker &amp; Cybersecurity Enthusiast</title>
+
+    <!-- Google SEO Meta Tags -->
+    <meta name="description" content="Official portfolio of Zakaria Ebne Mahmud — Ethical Hacker (Learner), Cyber Security Enthusiast, Bug Bounty Hunter, and Penetration Tester skilled in Linux, Python, and Termux.">
+    <meta name="keywords" content="Zakaria Ebne Mahmud, Ethical Hacker, Cyber Security Enthusiast, Bug Bounty Hunter, Penetration Tester, Linux, Python, Termux, Bangladesh">
+    <meta name="author" content="Zakaria Ebne Mahmud">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Link Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zakaria Ebne Mahmud — Ethical Hacker &amp; Cybersecurity Enthusiast">
+    <meta property="og:description" content="Ethical Hacker (Learner) • Cyber Security Enthusiast • Linux • Python • Termux • Always Learning">
+    <meta property="og:image" content="images/profile.jpg">
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zakaria Ebne Mahmud",
+      "jobTitle": "Ethical Hacker & Cybersecurity Enthusiast",
+      "description": "Ethical Hacker (Learner) • Cyber Security Enthusiast • Linux • Python • Termux • Always Learning",
+      "knowsAbout": ["Ethical Hacking", "Cybersecurity", "Penetration Testing", "Bug Bounty", "Linux", "Python", "Termux", "OWASP Top 10"]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            dark: '#070b09',
+                            card: '#0e1512',
+                            border: '#1c2b23',
+                            green: '#22c55e',
+                            emerald: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #070b09;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        /* Glowing effect around profile photo */
+        .profile-glow {
+            box-shadow: 0 0 55px rgba(34, 197, 94, 0.35), inset 0 0 25px rgba(34, 197, 94, 0.25);
+            animation: pulseGlow 4s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 45px rgba(34, 197, 94, 0.3), inset 0 0 20px rgba(34, 197, 94, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 75px rgba(34, 197, 94, 0.55), inset 0 0 30px rgba(34, 197, 94, 0.4);
+            }
+        }
+
+        .hero-bg-glow {
+            background: radial-gradient(circle at 78% 45%, rgba(34, 197, 94, 0.14) 0%, rgba(7, 11, 9, 0) 55%);
+        }
+
+        .cyber-card {
+            background-color: #0e1512;
+            border: 1px solid #1c2b23;
+            transition: all 0.3s ease;
+        }
+        .cyber-card:hover {
+            border-color: #22c55e;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(34, 197, 94, 0.22);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyber-green selection:text-black">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#070b09]/85 backdrop-blur-md border-b border-cyber-border/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- EDIT: Your Name / Logo -->
+                <a href="#home" class="text-lg sm:text-xl font-extrabold tracking-tight text-cyber-green">
+                    Zakaria Ebne Mahmud
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                    <a href="#home" class="hover:text-cyber-green transition-colors">Home</a>
+                    <a href="#skills" class="hover:text-cyber-green transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-cyber-green transition-colors">Projects</a>
+                    <a href="#certs" class="hover:text-cyber-green transition-colors">Certifications</a>
+                    <a href="#contact" class="hover:text-cyber-green transition-colors">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Menu" class="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyber-green hover:bg-cyber-card focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cyber-card border-b border-cyber-border px-4 pt-2 pb-4 space-y-1">
+            <a href="#home" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:text-cyber-green hover:bg-black/40">Home</a>
+            <a href="#skills" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:text-cyber-green hover:bg-black/40">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:text-cyber-green hover:bg-black/40">Projects</a>
+            <a href="#certs" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:text-cyber-green hover:bg-black/40">Certifications</a>
+            <a href="#contact" class="block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:text-cyber-green hover:bg-black/40">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 hero-bg-glow">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Content -->
+                    <div class="lg:col-span-7 text-center lg:text-left order-2 lg:order-1">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-green/10 border border-cyber-green/30 text-cyber-green text-xs sm:text-sm font-medium mb-4">
+                            <span class="w-2 h-2 rounded-full bg-cyber-green animate-ping"></span>
+                            Always Learning • Bug Bounty &amp; Pentesting
+                        </div>
+
+                        <p class="text-gray-300 text-base sm:text-lg font-medium mb-1">
+                            Hello, I'm <span class="text-white font-bold">Zakaria Ebne Mahmud</span>
+                        </p>
+
+                        <!-- EDIT: Headline & Intro Text -->
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-5">
+                            <span class="text-cyber-green block">Ethical Hacker</span>
+                            <span class="text-white text-2xl sm:text-3xl lg:text-4xl font-bold block mt-2">Cyber Security Enthusiast</span>
+                        </h1>
+
+                        <!-- Tagline Pill Bar -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm font-mono text-cyber-green mb-5">
+                            <span>Ethical Hacker (Learner)</span>
+                            <span class="text-gray-600">&bull;</span>
+                            <span>Linux</span>
+                            <span class="text-gray-600">&bull;</span>
+                            <span>Python</span>
+                            <span class="text-gray-600">&bull;</span>
+                            <span>Termux</span>
+                            <span class="text-gray-600">&bull;</span>
+                            <span>Always Learning</span>
+                        </div>
+
+                        <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                            Finding and fixing security weaknesses before attackers exploit them. Passionate about penetration testing, bug bounty hunting, Linux environments, and Python security automation.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-cyber-green hover:bg-emerald-400 text-black font-bold text-sm sm:text-base transition-all shadow-[0_0_20px_rgba(34,197,94,0.4)] text-center">
+                                Let’s Connect
+                            </a>
+                            <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-cyber-card hover:bg-cyber-border text-white border border-cyber-border font-semibold text-sm sm:text-base transition-all text-center">
+                                View Projects <i class="fas fa-arrow-right ml-2 text-cyber-green"></i>
+                            </a>
+                        </div>
+
+                        <!-- Quick Social Icons (Auto-populated from PROFILE_CONFIG) -->
+                        <div class="mt-8 pt-6 border-t border-cyber-border/50 flex flex-wrap items-center justify-center lg:justify-start gap-5">
+                            <span class="text-xs uppercase tracking-wider text-gray-500">Profiles:</span>
+                            <div id="hero-socials" class="flex flex-wrap items-center gap-5"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Profile Photo (Change via PROFILE_CONFIG.profilePhoto in code) -->
+                    <div class="lg:col-span-5 flex flex-col items-center order-1 lg:order-2">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full p-2 border-2 border-cyber-green/70 profile-glow bg-gradient-to-b from-cyber-green/20 to-transparent">
+                            <img 
+                                id="profile-image"
+                                src="images/profile.jpg" 
+                                onerror="this.src='https://placehold.co/600x600/0e1512/22c55e?text=Zakaria+Ebne+Mahmud'"
+                                alt="Zakaria Ebne Mahmud" 
+                                class="w-full h-full object-cover object-top rounded-full"
+                            >
+                            <div class="absolute -bottom-2 right-4 sm:right-8 bg-cyber-card border border-cyber-green/50 px-4 py-2 rounded-xl shadow-lg flex items-center gap-2">
+                                <i class="fas fa-shield-halved text-cyber-green"></i>
+                                <span class="text-xs sm:text-sm font-semibold text-white">Ethical Hacker (Learner)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- EDIT: Skills Cards and Tool Tags -->
+        <section id="skills" class="py-16 sm:py-24 border-t border-cyber-border/40">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Technical Expertise</h2>
+                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Core offensive security capabilities and industry-standard toolset</p>
+                </div>
+
+                <!-- 3 Core Skill Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10">
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-green/10 border border-cyber-green/30 flex items-center justify-center text-cyber-green font-mono font-bold text-lg mb-6">
+                            &gt;_
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Penetration Testing</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Web, API, network, and cloud assessments with clear, reproducible proof-of-concept reports.
+                        </p>
+                    </div>
+
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-green/10 border border-cyber-green/30 flex items-center justify-center text-cyber-green font-mono font-bold text-lg mb-6">
+                            [!]
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Threat Detection &amp; Response</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            SIEM tuning, deep log analysis, incident triage, and thorough post-incident reviews.
+                        </p>
+                    </div>
+
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8">
+                        <div class="w-12 h-12 rounded-xl bg-cyber-green/10 border border-cyber-green/30 flex items-center justify-center text-cyber-green font-mono font-bold text-lg mb-6">
+                            { }
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Vulnerability Management</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Automated & manual scanning, CVSS risk ranking, and actionable fix tracking for engineering teams.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tool & Framework Tags -->
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Linux</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Python</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Termux</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Burp Suite</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Nmap</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Metasploit</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Wireshark</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">Nuclei</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">OWASP Top 10</span>
+                    <span class="px-3.5 py-1.5 rounded-lg bg-cyber-card border border-cyber-border text-cyber-green font-mono text-xs sm:text-sm">MITRE ATT&amp;CK</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDIT: Your Projects, Bug Bounty & Experience -->
+        <section id="projects" class="py-16 sm:py-24 border-t border-cyber-border/40 bg-[#050807]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Projects &amp; Bug Bounty</h2>
+                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Selected security assessments, vulnerability disclosures, and offensive tooling</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full bg-cyber-green/10 border border-cyber-green/30 text-cyber-green font-mono text-xs mb-4">
+                                2025 — Web &amp; API Pentest
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">FinTech Web Application VAPT</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                Discovered 12 vulnerabilities in a production fintech web &amp; API ecosystem, including 2 critical IDOR and authentication bypass flaws, helping patch them prior to public launch.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cyber-border flex items-center justify-between text-xs text-gray-400">
+                            <span>Severity: <strong class="text-cyber-green">Critical (CVSS 9.1)</strong></span>
+                            <a href="#contact" class="text-cyber-green hover:underline font-semibold">Case Study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full bg-cyber-green/10 border border-cyber-green/30 text-cyber-green font-mono text-xs mb-4">
+                                2024 – 2026 — Bug Bounty
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Responsible Vulnerability Disclosures</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                Reported high-impact SSRF, Stored XSS, and Broken Access Control vulnerabilities across private and public programs on HackerOne and Bugcrowd.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cyber-border flex items-center justify-between text-xs text-gray-400">
+                            <span>Recognition: <strong class="text-cyber-green">Hall of Fame</strong></span>
+                            <a href="#contact" class="text-cyber-green hover:underline font-semibold">Write-ups &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="cyber-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="inline-block px-3 py-1 rounded-full bg-cyber-green/10 border border-cyber-green/30 text-cyber-green font-mono text-xs mb-4">
+                                2024 – Present — Security Tooling
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Automated Recon &amp; Nuclei Pipeline</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                                Built a Python &amp; Bash reconnaissance framework automating subdomain discovery, live HTTP probing, and custom Nuclei template scanning—reducing recon time by 70%.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-cyber-border flex items-center justify-between text-xs text-gray-400">
+                            <span>Stack: <strong class="text-cyber-green">Python / Bash</strong></span>
+                            <a id="project-github-link" href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-cyber-green hover:underline font-semibold">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDIT: Certifications -->
+        <section id="certs" class="py-14 sm:py-20 border-t border-cyber-border/40">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">Certifications &amp; Training</h2>
+                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Validated security credentials and continuous offensive security learning</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="cyber-card rounded-xl p-4 flex items-center gap-3">
+                        <i class="fas fa-certificate text-cyber-green text-xl"></i>
+                        <div>
+                            <p class="font-bold text-white text-sm sm:text-base">CEH</p>
+                            <p class="text-xs text-gray-400">Certified Ethical Hacker</p>
+                        </div>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-cyber-green text-xl"></i>
+                        <div>
+                            <p class="font-bold text-white text-sm sm:text-base">Security+</p>
+                            <p class="text-xs text-gray-400">CompTIA Security+</p>
+                        </div>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 flex items-center gap-3">
+                        <i class="fas fa-terminal text-cyber-green text-xl"></i>
+                        <div>
+                            <p class="font-bold text-white text-sm sm:text-base">eJPT / PNPT</p>
+                            <p class="text-xs text-gray-400">Penetration Testing</p>
+                        </div>
+                    </div>
+                    <div class="cyber-card rounded-xl p-4 flex items-center gap-3">
+                        <i class="fas fa-bug text-cyber-green text-xl"></i>
+                        <div>
+                            <p class="font-bold text-white text-sm sm:text-base">OSCP (In Progress)</p>
+                            <p class="text-xs text-gray-400">Offensive Security</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & All Social Channels -->
+        <section id="contact" class="py-16 sm:py-24 border-t border-cyber-border/40 bg-[#050807]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <h2 class="text-2xl sm:text-4xl font-bold text-white">Contact</h2>
+                    <p class="text-gray-400 mt-3 text-sm sm:text-base">Open to consulting, penetration testing engagements, full-time roles, and collaboration.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                    <!-- Left: Direct Contact & All Social Media Buttons -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <!-- Email Card -->
+                        <div class="cyber-card rounded-xl p-4 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-11 h-11 rounded-lg bg-cyber-green/10 text-cyber-green flex items-center justify-center text-lg">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Direct Email</p>
+                                    <a id="email-mailto-link" href="mailto:zakaria@example.com" class="text-sm sm:text-base font-semibold text-white hover:text-cyber-green transition">
+                                        zakaria@example.com
+                                    </a>
+                                </div>
+                            </div>
+                            <button id="copy-email-btn" class="p-2 text-gray-400 hover:text-cyber-green rounded-lg hover:bg-black/40" title="Copy Email">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- WhatsApp Card -->
+                        <div class="cyber-card rounded-xl p-4 flex items-center justify-between">
+                            <div class="flex items-center gap-4">
+                                <div class="w-11 h-11 rounded-lg bg-cyber-green/10 text-cyber-green flex items-center justify-center text-lg">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400">Phone / WhatsApp</p>
+                                    <p id="display-phone" class="text-sm sm:text-base font-semibold text-white">+880 1700-000000</p>
+                                </div>
+                            </div>
+                            <a id="whatsapp-direct-link" href="#" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cyber-green/15 text-cyber-green text-xs font-semibold hover:bg-cyber-green hover:text-black transition">
+                                Chat Now
+                            </a>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="cyber-card rounded-xl p-4 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-lg bg-cyber-green/10 text-cyber-green flex items-center justify-center text-lg">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">Location</p>
+                                <p id="display-location" class="text-sm sm:text-base font-semibold text-white">Rajshahi, Bangladesh</p>
+                            </div>
+                        </div>
+
+                        <!-- All Social & Bug Bounty Platforms Grid -->
+                        <div class="pt-4">
+                            <p class="text-sm font-medium text-gray-300 mb-3">All Profiles &amp; Communication Channels:</p>
+                            <div id="contact-socials-grid" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Direct Message Form -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="cyber-card rounded-2xl p-6 sm:p-8 space-y-5">
+                            <h3 class="text-xl font-bold text-white mb-2">Send a Message</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-400 mb-1.5">Your Name</label>
+                                    <input type="text" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl bg-[#070b09] border border-cyber-border text-white text-sm focus:outline-none focus:border-cyber-green transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-400 mb-1.5">Email or Phone</label>
+                                    <input type="text" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl bg-[#070b09] border border-cyber-border text-white text-sm focus:outline-none focus:border-cyber-green transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1.5">Subject</label>
+                                <input type="text" required placeholder="Penetration Testing / Consulting / Collaboration" class="w-full px-4 py-3 rounded-xl bg-[#070b09] border border-cyber-border text-white text-sm focus:outline-none focus:border-cyber-green transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-gray-400 mb-1.5">Message</label>
+                                <textarea rows="4" required placeholder="Write your message or security scope here..." class="w-full px-4 py-3 rounded-xl bg-[#070b09] border border-cyber-border text-white text-sm focus:outline-none focus:border-cyber-green transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-cyber-green hover:bg-emerald-400 text-black font-bold text-sm sm:text-base transition shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyber-border/60 py-8 bg-[#070b09]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-gray-400 text-xs sm:text-sm">
+                &copy; 2026 <span class="text-cyber-green font-semibold">Zakaria Ebne Mahmud</span>. All rights reserved.
+            </p>
+            <div id="footer-socials" class="flex flex-wrap items-center justify-center gap-5 text-gray-400"></div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-cyber-card border border-cyber-green text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fas fa-check-circle text-cyber-green text-lg"></i>
+        <span id="toast-message" class="text-sm font-medium">Copied!</span>
+    </div>
+
+    <script>
+        // =========================================================================
+        // EDIT HERE: Put your photo path, email, phone & usernames below!
+        // Any empty ("") username will automatically hide that button.
+        // =========================================================================
+        const PROFILE_CONFIG = {
+            profilePhoto: "images/profile.jpg",    // Change photo path or URL here
+            email: "zakaria@example.com",          // Your email address
+            whatsapp: "8801700000000",             // WhatsApp number with country code (no +)
+            phoneDisplay: "+880 1700-000000",      // Display phone number
+            location: "Rajshahi, Bangladesh",
+
+            // Enter ONLY your usernames below:
+            usernames: {
+                github: "zakariaebnemahmud",       // github.com/username
+                linkedin: "zakariaebnemahmud",     // linkedin.com/in/username
+                hackerone: "zakariaebnemahmud",    // hackerone.com/username
+                bugcrowd: "zakariaebnemahmud",     // bugcrowd.com/username
+                tryhackme: "zakariaebnemahmud",    // tryhackme.com/p/username
+                facebook: "zakariaebnemahmud",     // facebook.com/username
+                instagram: "zakariaebnemahmud",    // instagram.com/username
+                twitter: "zakariaebnemahmud",      // x.com/username
+                telegram: "zakariaebnemahmud",     // t.me/username
+                youtube: "@zakariaebnemahmud",     // youtube.com/@username
+                medium: "@zakariaebnemahmud",      // medium.com/@username
+                discord: "zakaria#0001"            // Clicking copies your Discord username
+            }
+        };
+
+        const SOCIAL_PLATFORMS = [
+            { key: 'github', name: 'GitHub', icon: 'fab fa-github', buildUrl: u => `https://github.com/${u}` },
+            { key: 'linkedin', name: 'LinkedIn', icon: 'fab fa-linkedin', buildUrl: u => `https://www.linkedin.com/in/${u}` },
+            { key: 'hackerone', name: 'HackerOne', icon: 'fas fa-bug', buildUrl: u => `https://hackerone.com/${u}` },
+            { key: 'bugcrowd', name: 'Bugcrowd', icon: 'fas fa-shield-virus', buildUrl: u => `https://bugcrowd.com/${u}` },
+            { key: 'tryhackme', name: 'TryHackMe', icon: 'fas fa-terminal', buildUrl: u => `https://tryhackme.com/p/${u}` },
+            { key: 'facebook', name: 'Facebook', icon: 'fab fa-facebook', buildUrl: u => `https://www.facebook.com/${u}` },
+            { key: 'instagram', name: 'Instagram', icon: 'fab fa-instagram', buildUrl: u => `https://www.instagram.com/${u}` },
+            { key: 'twitter', name: 'X (Twitter)', icon: 'fab fa-x-twitter', buildUrl: u => `https://x.com/${u}` },
+            { key: 'telegram', name: 'Telegram', icon: 'fab fa-telegram', buildUrl: u => `https://t.me/${u}` },
+            { key: 'youtube', name: 'YouTube', icon: 'fab fa-youtube', buildUrl: u => `https://www.youtube.com/${u.startsWith('@') ? u : '@' + u}` },
+            { key: 'medium', name: 'Medium', icon: 'fab fa-medium', buildUrl: u => `https://medium.com/${u.startsWith('@') ? u : '@' + u}` },
+            { key: 'discord', name: 'Discord', icon: 'fab fa-discord', copyOnly: true }
+        ];
+
+        function initProfileLinks() {
+            const profileImg = document.getElementById('profile-image');
+            if (profileImg && PROFILE_CONFIG.profilePhoto) {
+                profileImg.src = PROFILE_CONFIG.profilePhoto;
+            }
+
+            const emailLink = document.getElementById('email-mailto-link');
+            emailLink.textContent = PROFILE_CONFIG.email;
+            emailLink.href = `mailto:${PROFILE_CONFIG.email}`;
+            document.getElementById('copy-email-btn').onclick = () => copyText(PROFILE_CONFIG.email, 'Email copied to clipboard!');
+            
+            document.getElementById('display-phone').textContent = PROFILE_CONFIG.phoneDisplay;
+            document.getElementById('whatsapp-direct-link').href = `https://wa.me/${PROFILE_CONFIG.whatsapp}`;
+            document.getElementById('display-location').textContent = PROFILE_CONFIG.location;
+
+            if (PROFILE_CONFIG.usernames.github) {
+                document.getElementById('project-github-link').href = `https://github.com/${PROFILE_CONFIG.usernames.github}`;
+            }
+
+            const heroContainer = document.getElementById('hero-socials');
+            const contactGrid = document.getElementById('contact-socials-grid');
+            const footerContainer = document.getElementById('footer-socials');
+
+            heroContainer.innerHTML = '';
+            contactGrid.innerHTML = '';
+            footerContainer.innerHTML = '';
+
+            if (PROFILE_CONFIG.whatsapp) {
+                const waUrl = `https://wa.me/${PROFILE_CONFIG.whatsapp}`;
+                heroContainer.innerHTML += `<a href="${waUrl}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-gray-400 hover:text-cyber-green text-xl transition-transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>`;
+                footerContainer.innerHTML += `<a href="${waUrl}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="hover:text-cyber-green transition"><i class="fab fa-whatsapp text-lg"></i></a>`;
+            }
+
+            SOCIAL_PLATFORMS.forEach(platform => {
+                const username = PROFILE_CONFIG.usernames[platform.key];
+                if (!username || username.trim() === '') return;
+
+                if (platform.copyOnly) {
+                    contactGrid.innerHTML += `
+                        <button onclick="copyText('${username}', '${platform.name} username (${username}) copied!')" class="cyber-card rounded-xl p-3 flex items-center gap-2.5 text-sm text-gray-300 hover:text-cyber-green text-left">
+                            <i class="${platform.icon} text-lg text-cyber-green"></i> <span>${platform.name}</span>
+                        </button>`;
+                } else {
+                    const url = platform.buildUrl(username.trim());
+                    heroContainer.innerHTML += `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" title="${platform.name}" class="text-gray-400 hover:text-cyber-green text-xl transition-transform hover:scale-110">
+                            <i class="${platform.icon}"></i>
+                        </a>`;
+                    contactGrid.innerHTML += `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" class="cyber-card rounded-xl p-3 flex items-center gap-2.5 text-sm text-gray-300 hover:text-cyber-green">
+                            <i class="${platform.icon} text-lg text-cyber-green"></i> <span>${platform.name}</span>
+                        </a>`;
+                    footerContainer.innerHTML += `
+                        <a href="${url}" target="_blank" rel="noopener noreferrer" title="${platform.name}" class="hover:text-cyber-green transition">
+                            <i class="${platform.icon} text-lg"></i>
+                        </a>`;
+                }
+            });
+        }
+
+        initProfileLinks();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Toast & Copy helper
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3000);
+        }
+
+        function copyText(text, successMsg) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            showToast(successMsg);
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('Message sent! Thank you for reaching out.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
